@@ -1,0 +1,46 @@
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <title>Área Cilindro</title>
+ <style type="text/css">
+  #areaResultado{
+   width: 150pt;
+   height: 14pt;
+   margin-top: 5px;
+  }
+ </style>
+</head>
+<body>
+ <h3>Área de un Cilindro</h3>
+
+ <input type="number" id="base" placeholder="Base">
+ <input type="number" id="altura" placeholder="Altura">
+ <button onclick="obtenerArea()">Calcular área</button>
+ <br><br>
+ <label>Área: </label>
+ <div id="areaResultado">
+ </div>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.2/math.js"></script>
+
+ <script>
+  function obtenerArea(){
+   var areaResultado = document.getElementById("areaResultado");
+   var b = parseInt(document.getElementById("base").value);
+   var h = parseInt(document.getElementById("altura").value);
+
+
+   var pi;
+
+   pi= Math.PI;
+
+   var area = b * h;
+   area=area*pi;
+  
+   areaResultado.innerHTML = "" + area;
+
+  }
+ </script>
+
+</body>
+</html>

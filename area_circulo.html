@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de un Circulo</title>
+    <style type="text/css">
+        #areaResultado{
+         width: 150pt;
+         height: 14pt;
+         margin-top: 5px;
+        }
+       </style>
+</head>
+<body>
+    <h3>Área de un Circulo</h3>
+
+ <input type="number" id="radio" placeholder="Radio">
+ <button onclick="obtenerArea()">Calcular área</button>
+ <br><br>
+ <label>Área: </label>
+ <div id="areaResultado">
+ </div>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.2/math.js"></script>
+
+ <script>
+  function obtenerArea(){
+   var areaResultado = document.getElementById("areaResultado");
+   var r= parseInt(document.getElementById("radio").value);
+  
+   var pi,r2;
+   
+   r2=r*r;
+   pi= Math.PI;
+
+   var area = pi * r2;
+
+   areaResultado.innerHTML = "" + area;
+
+  }
+ </script>
+</body>
+</html>
